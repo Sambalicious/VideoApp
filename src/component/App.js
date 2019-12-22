@@ -11,6 +11,10 @@ class App extends React.Component {
         videos: [],
         selectedVideo: null
     };
+
+    componentDidMount(){
+        this.onTermSubmit('stories')
+    }
     
     onTermSubmit = async term => { 
       const response = await axios.get('https://www.googleapis.com/youtube/v3/search', {
